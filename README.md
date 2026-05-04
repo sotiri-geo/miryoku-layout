@@ -14,8 +14,15 @@ This repo captures the Miryoku-inspired layout I have settled on for the 36-key 
 ## Repo Contents
 
 - `exports/final-miryoku-corne-v4-vial-fixed.json` contains the settled Vial export.
+- `docs/layers-overview.svg` renders the active layers directly on GitHub.
 - `docs/layout-notes.md` summarizes the base layer and the main layer roles.
 - `docs/qmk-settings.md` documents the QMK behavior settings paired with this layout.
+
+## Layer Diagram
+
+![Layer overview](docs/layers-overview.svg)
+
+Empty caps in the diagram inherit from the base layer. Omitted matrix slots are not physical keys on the 36-key Chocofi.
 
 ## Importing The Layout
 
