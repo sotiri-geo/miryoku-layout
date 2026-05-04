@@ -91,27 +91,27 @@
     <rect class="base" x="170" y="166" width="44" height="30" rx="8" /><text class="keytext" x="192" y="181">L1/Spc</text>
     <rect class="base" x="220" y="166" width="44" height="30" rx="8" /><text class="keytext" x="242" y="181">Tab</text>
 
-    <rect class="base" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">'</text>
-    <rect class="base" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Y</text>
+    <rect class="base" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">J</text>
+    <rect class="base" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">L</text>
     <rect class="base" x="378" y="48" width="44" height="30" rx="8" /><text class="keytext" x="400" y="63">U</text>
-    <rect class="base" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">L</text>
-    <rect class="base" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">J</text>
+    <rect class="base" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Y</text>
+    <rect class="base" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">'</text>
 
-    <rect class="base" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">Gui/O</text>
-    <rect class="base" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Alt/I</text>
+    <rect class="base" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">M</text>
+    <rect class="base" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Sft/N</text>
     <rect class="base" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">Ctl/E</text>
-    <rect class="base" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Sft/N</text>
-    <rect class="base" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">M</text>
+    <rect class="base" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Alt/I</text>
+    <rect class="base" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">Gui/O</text>
 
-    <rect class="base" x="278" y="124" width="44" height="30" rx="8" /><text class="keytext" x="300" y="139">/</text>
-    <rect class="base" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">.</text>
+    <rect class="base" x="278" y="124" width="44" height="30" rx="8" /><text class="keytext" x="300" y="139">K</text>
+    <rect class="base" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">H</text>
     <rect class="base" x="378" y="124" width="44" height="30" rx="8" /><text class="keytext" x="400" y="139">,</text>
-    <rect class="base" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">H</text>
-    <rect class="base" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">K</text>
+    <rect class="base" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">.</text>
+    <rect class="base" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">/</text>
 
-    <rect class="base" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">=</text>
+    <rect class="base" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">L5/Ent</text>
     <rect class="base" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">L4/Bsp</text>
-    <rect class="base" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">L5/Ent</text>
+    <rect class="base" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">=</text>
   </g>
 
   <g transform="translate(576 24)">
@@ -120,27 +120,27 @@
     <text class="subtitle" x="20" y="42">Editing, arrows, and custom macros</text>
     <use href="#board-frame" />
 
-    <rect class="nav" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">Undo</text>
-    <rect class="nav" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Cut</text>
+    <rect class="nav" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">Caps</text>
+    <rect class="nav" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">M2</text>
     <rect class="nav" x="378" y="48" width="44" height="30" rx="8" /><text class="keytext" x="400" y="63">Copy</text>
-    <rect class="nav" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">M2</text>
-    <rect class="nav" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">Caps</text>
+    <rect class="nav" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Cut</text>
+    <rect class="nav" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">Undo</text>
 
-    <rect class="nav" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">Right</text>
-    <rect class="nav" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Up</text>
+    <rect class="nav" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">Ctl+`</text>
+    <rect class="nav" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Left</text>
     <rect class="nav" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">Down</text>
-    <rect class="nav" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Left</text>
-    <rect class="nav" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">Ctl+`</text>
+    <rect class="nav" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Up</text>
+    <rect class="nav" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">Right</text>
 
-    <rect class="nav" x="278" y="124" width="44" height="30" rx="8" /><text class="keytext" x="300" y="139">M0</text>
-    <rect class="nav" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">Ctl+U</text>
+    <rect class="nav" x="278" y="124" width="44" height="30" rx="8" /><text class="keytext" x="300" y="139">Ins</text>
+    <rect class="nav" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">M1</text>
     <rect class="nav" x="378" y="124" width="44" height="30" rx="8" /><text class="keytext" x="400" y="139">Ctl+D</text>
-    <rect class="nav" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">M1</text>
-    <rect class="nav" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">Ins</text>
+    <rect class="nav" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">Ctl+U</text>
+    <rect class="nav" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">M0</text>
 
-    <rect class="nav" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Tab</text>
+    <rect class="nav" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Ent</text>
     <rect class="nav" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">Bsp</text>
-    <rect class="nav" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Ent</text>
+    <rect class="nav" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Tab</text>
   </g>
 
   <g transform="translate(24 252)">
@@ -149,24 +149,24 @@
     <text class="subtitle" x="20" y="42">Pointer, wheel, and mouse buttons</text>
     <use href="#board-frame" />
 
-    <rect class="mouse" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">Undo</text>
-    <rect class="mouse" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Cut</text>
+    <rect class="mouse" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Paste</text>
     <rect class="mouse" x="378" y="48" width="44" height="30" rx="8" /><text class="keytext" x="400" y="63">Copy</text>
-    <rect class="mouse" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Paste</text>
+    <rect class="mouse" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Cut</text>
+    <rect class="mouse" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">Undo</text>
 
-    <rect class="mouse" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">MsR</text>
-    <rect class="mouse" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">MsU</text>
+    <rect class="mouse" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">MsL</text>
     <rect class="mouse" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">MsD</text>
-    <rect class="mouse" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">MsL</text>
+    <rect class="mouse" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">MsU</text>
+    <rect class="mouse" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">MsR</text>
 
-    <rect class="mouse" x="278" y="124" width="44" height="30" rx="8" /><text class="keytext" x="300" y="139">WhR</text>
-    <rect class="mouse" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">WhU</text>
+    <rect class="mouse" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">WhL</text>
     <rect class="mouse" x="378" y="124" width="44" height="30" rx="8" /><text class="keytext" x="400" y="139">WhD</text>
-    <rect class="mouse" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">WhL</text>
+    <rect class="mouse" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">WhU</text>
+    <rect class="mouse" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">WhR</text>
 
-    <rect class="mouse" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Btn3</text>
+    <rect class="mouse" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Btn2</text>
     <rect class="mouse" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">Btn1</text>
-    <rect class="mouse" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Btn2</text>
+    <rect class="mouse" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Btn3</text>
   </g>
 
   <g transform="translate(576 252)">
@@ -175,20 +175,20 @@
     <text class="subtitle" x="20" y="42">Volume, RGB, playback, and Hyper arrows</text>
     <use href="#board-frame" />
 
-    <rect class="media" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">RGB+</text>
-    <rect class="media" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Vol+</text>
+    <rect class="media" x="278" y="48" width="44" height="30" rx="8" /><text class="keytext" x="300" y="63">RGB</text>
+    <rect class="media" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Mode</text>
     <rect class="media" x="378" y="48" width="44" height="30" rx="8" /><text class="keytext" x="400" y="63">Vol-</text>
-    <rect class="media" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Mode</text>
-    <rect class="media" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">RGB</text>
+    <rect class="media" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Vol+</text>
+    <rect class="media" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">RGB+</text>
 
-    <rect class="media" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">HypR</text>
-    <rect class="media" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">HypU</text>
+    <rect class="media" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">HypL</text>
     <rect class="media" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">HypD</text>
-    <rect class="media" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">HypL</text>
+    <rect class="media" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">HypU</text>
+    <rect class="media" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">HypR</text>
 
-    <rect class="media" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Mute</text>
+    <rect class="media" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Stop</text>
     <rect class="media" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">Play</text>
-    <rect class="media" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Stop</text>
+    <rect class="media" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Mute</text>
   </g>
 
   <g transform="translate(24 480)">
@@ -219,10 +219,10 @@
     <rect class="symbol" x="170" y="166" width="44" height="30" rx="8" /><text class="keytext" x="192" y="181">)</text>
     <rect class="symbol" x="220" y="166" width="44" height="30" rx="8" /><text class="keytext" x="242" y="181">_</text>
 
-    <rect class="symbol" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">Gui</text>
-    <rect class="symbol" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Alt</text>
+    <rect class="symbol" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Sft</text>
     <rect class="symbol" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">Ctl</text>
-    <rect class="symbol" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Sft</text>
+    <rect class="symbol" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Alt</text>
+    <rect class="symbol" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">Gui</text>
   </g>
 
   <g transform="translate(576 480)">
@@ -253,10 +253,10 @@
     <rect class="number" x="170" y="166" width="44" height="30" rx="8" /><text class="keytext" x="192" y="181">0</text>
     <rect class="number" x="220" y="166" width="44" height="30" rx="8" /><text class="keytext" x="242" y="181">-</text>
 
-    <rect class="number" x="278" y="86" width="44" height="30" rx="8" /><text class="keytext" x="300" y="101">Gui</text>
-    <rect class="number" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Alt</text>
+    <rect class="number" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">Sft</text>
     <rect class="number" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">Ctl</text>
-    <rect class="number" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Sft</text>
+    <rect class="number" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">Alt</text>
+    <rect class="number" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">Gui</text>
   </g>
 
   <rect class="ghost" x="24" y="692" width="24" height="16" rx="5" />

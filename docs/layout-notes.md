@@ -4,6 +4,8 @@
 
 The base layer is Colemak-DH with homerow mods.
 
+The rows below are written in display order, left to right as the keyboard appears in front of me.
+
 Left hand:
 
 - `Q W F P B`
@@ -12,14 +14,14 @@ Left hand:
 
 Right hand:
 
-- `' Y U L J`
-- `RGUI_T(O) RALT_T(I) RCTL_T(E) RSFT_T(N) M`
-- `/ . , H K`
+- `J L U Y '`
+- `M RSFT_T(N) RCTL_T(E) RALT_T(I) RGUI_T(O)`
+- `K H , . /`
 
 Thumb keys:
 
 - Left: `LT3(Escape)`, `LT1(Space)`, `Tab`
-- Right: `=`, `LT4(Backspace)`, `LT5(Enter)`
+- Right: `LT5(Enter)`, `LT4(Backspace)`, `=`
 
 ## Layer Sketch
 
