@@ -29,6 +29,10 @@ Thumb keys:
 - Layer 4 is the shifted symbol layer.
 - Layer 5 is the number and unshifted symbol layer.
 
+## Saved Export
+
+The canonical Vial save file in this repo is `exports/miryoku-colemakdh.vil`.
+
 ## Preserved Macros
 
 The settled Vial export includes three custom macros (`M0`, `M1`, and `M2`). They are kept as-is so this repo matches the layout snapshot I am actually using.
