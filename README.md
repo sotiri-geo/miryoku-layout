@@ -13,7 +13,8 @@ This repo captures the Miryoku-inspired layout I have settled on for the 36-key 
 
 ## Repo Contents
 
-- `exports/miryoku-colemakdh.vil` contains the settled Vial save file.
+- `exports/chocofi-miryoku-colemakdh.vil` contains the Chocofi-compatible Vial save file to import.
+- `exports/miryoku-colemakdh.vil` preserves the earlier source layout save used for the conversion.
 - `docs/layers-overview.svg` renders the active layers directly on GitHub.
 - `docs/layout-notes.md` summarizes the base layer and the main layer roles.
 - `docs/qmk-settings.md` documents the QMK behavior settings paired with this layout.
@@ -28,7 +29,7 @@ Empty caps in the diagram inherit from the base layer. Omitted matrix slots are 
 
 1. Open Vial.
 2. Back up your current layout.
-3. Import `exports/miryoku-colemakdh.vil`.
+3. Import `exports/chocofi-miryoku-colemakdh.vil`.
 4. If you compile your own firmware, apply the QMK settings from `docs/qmk-settings.md`.
 
 ## Highlights

@@ -33,7 +33,9 @@ Thumb keys:
 
 ## Saved Export
 
-The canonical Vial save file in this repo is `exports/miryoku-colemakdh.vil`.
+The canonical Chocofi-compatible Vial save file in this repo is `exports/chocofi-miryoku-colemakdh.vil`.
+
+The earlier source save is kept at `exports/miryoku-colemakdh.vil` for reference.
 
 ## Preserved Macros
 
