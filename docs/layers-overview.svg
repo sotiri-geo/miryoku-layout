@@ -186,8 +186,8 @@
     <rect class="media" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">HypU</text>
     <rect class="media" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">HypR</text>
 
-    <rect class="media" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Stop</text>
-    <rect class="media" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">Play</text>
+    <rect class="media" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Play</text>
+    <rect class="media" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">Stop</text>
     <rect class="media" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Mute</text>
   </g>
 
