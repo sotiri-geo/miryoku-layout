@@ -664,16 +664,36 @@
     ]
   ],
   "encoder_layout": [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ]
   ],
   "layout_options": -1,
   "macro": [
@@ -698,19 +718,45 @@
         "KC_D"
       ]
     ],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ],
+    [
+
+    ]
   ],
   "vial_protocol": 6,
   "via_protocol": 9,
@@ -940,7 +986,232 @@
       180
     ]
   ],
-  "combo": [],
+  "combo": [
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ]
+  ],
   "key_override": [
     {
       "trigger": "KC_NO",
@@ -1231,7 +1502,200 @@
       "options": 7
     }
   ],
-  "alt_repeat_key": [],
+  "alt_repeat_key": [
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    },
+    {
+      "keycode": "KC_NO",
+      "alt_keycode": "KC_NO",
+      "allowed_mods": 0,
+      "options": 0
+    }
+  ],
   "settings": {
     "1": 0,
     "2": 50,
@@ -1239,7 +1703,7 @@
     "4": 175,
     "5": 5,
     "6": 5000,
-    "7": 240,
+    "7": 180,
     "8": 11,
     "9": 10,
     "10": 20,
@@ -1253,6 +1717,12 @@
     "18": 0,
     "19": 80,
     "20": 5,
-    "21": 128
+    "21": 128,
+    "22": 0,
+    "23": 1,
+    "24": 0,
+    "25": 120,
+    "26": 1,
+    "27": 150
   }
 }

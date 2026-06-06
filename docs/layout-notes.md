@@ -2,7 +2,7 @@
 
 ## Base Layer
 
-The base layer is Colemak-DH with homerow mods.
+The base layer is Colemak-DH with home-row mods.
 
 The rows below are written in display order, left to right as the keyboard appears in front of me.
 
@@ -35,7 +35,15 @@ Thumb keys:
 
 The canonical Chocofi-compatible Vial save file in this repo is `exports/chocofi-miryoku-colemakdh.vil`.
 
+It is formatted for the firmware in `firmware/crkbd_rev1_chocofi_miryoku_vial_rp2040_ce.uf2`, including 10 layers and the Vial feature arrays required by the compiled firmware.
+
 The earlier source save is kept at `exports/miryoku-colemakdh.vil` for reference.
+
+## Firmware Source
+
+The matching Vial-QMK keymap source is stored under `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_vial/`.
+
+The keymap uses `LAYOUT_split_3x5_3`, and `keymap.c` defines a `chordal_hold_layout` where alpha keys are left/right handed and thumb keys are `*`. The `*` handedness means thumb layer-taps can chord naturally with either hand.
 
 ## Preserved Macros
 

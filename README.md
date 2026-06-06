@@ -1,20 +1,23 @@
 # Miryoku Layout for My 36-Key Chocofi
 
-This repo captures the Miryoku-inspired layout I have settled on for the 36-key split Chocofi I use as my daily driver. It keeps the importable Vial save file alongside the QMK notes I want handy whenever I revisit the firmware.
+This repo captures the Miryoku-inspired layout I use on my 36-key split Chocofi. It keeps the flashed Vial-QMK firmware, the importable Vial save file, and the matching QMK keymap source together so another Chocofi can be updated from the same known-good setup.
 
 ## Setup At A Glance
 
 - Board: 36-key split Chocofi
 - Layout style: Miryoku-inspired
 - Base layer: Colemak-DH
-- Mods: homerow mods
-- Firmware tooling: Vial / QMK
-- QMK behavior tuning: `TAPPING_TERM 240`, `PERMISSIVE_HOLD`, `IGNORE_MOD_TAP_INTERRUPT`
+- Mods: home-row mods
+- Firmware tooling: Vial-QMK on `crkbd/rev1`
+- Controller target: RP2040 Pro Micro-compatible controller, built with `CONVERT_TO=rp2040_ce`
+- QMK behavior tuning: `TAPPING_TERM 180`, `QUICK_TAP_TERM 120`, `FLOW_TAP_TERM 150`, `CHORDAL_HOLD`, `HOLD_ON_OTHER_KEY_PRESS`
 
 ## Repo Contents
 
-- `exports/chocofi-miryoku-colemakdh.vil` contains the Chocofi-compatible Vial save file to import.
+- `firmware/crkbd_rev1_chocofi_miryoku_vial_rp2040_ce.uf2` is the working UF2 flashed to both halves.
+- `exports/chocofi-miryoku-colemakdh.vil` is the canonical Vial save file to import after flashing.
 - `exports/miryoku-colemakdh.vil` preserves the earlier source layout save used for the conversion.
+- `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_vial/` contains the Vial-QMK keymap source used to build the UF2.
 - `docs/layers-overview.svg` renders the active layers directly on GitHub.
 - `docs/layout-notes.md` summarizes the base layer and the main layer roles.
 - `docs/qmk-settings.md` documents the QMK behavior settings paired with this layout.
@@ -25,16 +28,40 @@ This repo captures the Miryoku-inspired layout I have settled on for the 36-key 
 
 Empty caps in the diagram inherit from the base layer. Omitted matrix slots are not physical keys on the 36-key Chocofi.
 
-## Importing The Layout
+## Updating Another Chocofi
 
-1. Open Vial.
-2. Back up your current layout.
-3. Import `exports/chocofi-miryoku-colemakdh.vil`.
-4. If you compile your own firmware, apply the QMK settings from `docs/qmk-settings.md`.
+1. Flash `firmware/crkbd_rev1_chocofi_miryoku_vial_rp2040_ce.uf2` to the left half.
+2. Flash the same UF2 to the right half.
+3. Open Vial.
+4. Back up the keyboard's current layout.
+5. Import `exports/chocofi-miryoku-colemakdh.vil`.
+
+Use the same UF2 for both halves. Put only one half into bootloader at a time, copy the UF2 to the `RPI-RP2` drive, wait for it to reboot, then repeat for the other half.
+
+## Rebuilding The Firmware
+
+Copy `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_vial/` into a Vial-QMK checkout under `keyboards/crkbd/keymaps/`, then compile:
+
+```sh
+qmk compile -kb crkbd/rev1 -km chocofi_miryoku_vial -e CONVERT_TO=rp2040_ce
+```
+
+The expected output name is:
+
+```text
+crkbd_rev1_chocofi_miryoku_vial_rp2040_ce.uf2
+```
 
 ## Highlights
 
-- Colemak-DH base layer with homerow mods on `A R S T` and `O I E N`
+- Colemak-DH base layer with home-row mods on `A R S T` and `O I E N`
 - Miryoku-style layer usage centered around thumb keys
 - Navigation/edit, mouse, media/system, symbols, and numbers preserved in the save file
-- The Vial snapshot keeps the custom macros already present in the settled layout
+- Vial-compatible saved layout with 10 layers, 32 tap-dance slots, 32 combo slots, 32 key-override slots, and 32 alt-repeat slots
+- Caps Word, Layer Lock, Repeat Key, mouse keys, media keys, tap dance, combos, and key overrides compiled into the firmware
+
+## References
+
+- [QMK Tap-Hold configuration](https://docs.qmk.fm/tap_hold)
+- [QMK Caps Word](https://develop-docs.qmk.fm/features/caps_word)
+- [Vial porting guide](https://get.vial.today/docs/porting-to-vial.html)
