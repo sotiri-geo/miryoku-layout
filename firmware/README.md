@@ -25,3 +25,5 @@ The firmware was built from the keymap source in:
 ```text
 qmk/keyboards/crkbd/keymaps/chocofi_miryoku_vial/
 ```
+
+This build includes a runtime guard that keeps Chordal Hold, Hold-on-other-key, Flow Tap, and the tap timing settings aligned with the saved Vial layout after flashing or EEPROM reset.

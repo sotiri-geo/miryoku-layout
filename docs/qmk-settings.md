@@ -78,6 +78,24 @@ The canonical export includes QMK Settings values matching the firmware:
 
 For this Vial-QMK tree, these map to tapping term, permissive hold, hold-on-other-key, retro tapping, quick tap term, chordal hold, and flow tap term.
 
+## Runtime Guard
+
+Because `QMK_SETTINGS = yes` stores these tap-hold options in EEPROM, a fresh flash, EEPROM reset, or partial Vial import can leave Chordal Hold off even though `CHORDAL_HOLD` is compiled. When that happens, same-hand rolls such as holding `T` and pressing `V` incorrectly resolve as `Shift+V`.
+
+The keymap's `keyboard_post_init_user()` reasserts the intended runtime settings at boot:
+
+```c
+set_qmk_setting_u16(QSID_TAPPING_TERM, 180);
+set_qmk_setting_u8(QSID_PERMISSIVE_HOLD, 0);
+set_qmk_setting_u8(QSID_HOLD_ON_OTHER_KEY_PRESS, 1);
+set_qmk_setting_u8(QSID_RETRO_TAPPING, 0);
+set_qmk_setting_u16(QSID_QUICK_TAP_TERM, 120);
+set_qmk_setting_u8(QSID_CHORDAL_HOLD, 1);
+set_qmk_setting_u16(QSID_FLOW_TAP_TERM, 150);
+```
+
+It reads first and only writes when a value differs, avoiding repeated EEPROM writes during normal boots.
+
 ## Notes
 
 - `PERMISSIVE_HOLD` is intentionally off. It is useful as a softer alternative to `HOLD_ON_OTHER_KEY_PRESS`, but enabling both adds little for this layout because hold-on-other-key resolves first.
