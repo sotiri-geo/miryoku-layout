@@ -30,7 +30,7 @@ The firmware and save file are intentionally sized for the current Vial export:
 
 Because `REPEAT_KEY_ENABLE = yes`, Vial also exposes 32 alt-repeat entries. The canonical export fills unused slots with neutral values so Vial can import it cleanly.
 
-## `rules.mk`
+## Vial `rules.mk`
 
 ```make
 VIA_ENABLE          = yes
@@ -50,6 +50,28 @@ CAPS_WORD_ENABLE    = yes
 LAYER_LOCK_ENABLE   = yes
 REPEAT_KEY_ENABLE   = yes
 ```
+
+## QMK-only `rules.mk`
+
+The QMK-only diagnostic build intentionally leaves Vial and QMK Settings disabled:
+
+```make
+LTO_ENABLE          = yes
+
+RGBLIGHT_ENABLE     = yes
+RGB_MATRIX_ENABLE   = no
+MOUSEKEY_ENABLE     = no
+EXTRAKEY_ENABLE     = yes
+
+OLED_ENABLE         = no
+OLED_DRIVER         = SSD1306
+
+CAPS_WORD_ENABLE    = yes
+LAYER_LOCK_ENABLE   = yes
+REPEAT_KEY_ENABLE   = yes
+```
+
+With this build, `CHORDAL_HOLD`, `HOLD_ON_OTHER_KEY_PRESS`, `FLOW_TAP_TERM`, and the timing values come directly from `config.h`. Mouse keys are intentionally disabled because the QMK-only keymap omits the mouse layer.
 
 ## Why These Settings
 

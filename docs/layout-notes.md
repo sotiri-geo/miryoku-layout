@@ -23,13 +23,22 @@ Thumb keys:
 - Left: `LT3(Escape)`, `LT1(Space)`, `Tab`
 - Right: `LT5(Enter)`, `LT4(Backspace)`, `=`
 
-## Layer Sketch
+## Vial Layer Sketch
 
 - Layer 1 is the main navigation and edit layer.
 - Layer 2 is the mouse layer with pointer, wheel, and buttons.
 - Layer 3 holds media, RGB, and system controls.
 - Layer 4 is the shifted symbol layer.
 - Layer 5 is the number and unshifted symbol layer.
+
+## QMK-only Layer Sketch
+
+The QMK-only keymap omits the mouse layer and compiles only the layers I actively use:
+
+- Navigation and edit
+- Media, RGB, and system controls
+- Shifted symbols
+- Numbers and unshifted symbols
 
 ## Saved Export
 
@@ -43,8 +52,10 @@ The earlier source save is kept at `exports/miryoku-colemakdh.vil` for reference
 
 The matching Vial-QMK keymap source is stored under `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_vial/`.
 
+A QMK-only keymap is also stored under `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_qmk/`. It compiles the layout directly into `keymap.c` so tap-hold behavior can be tested without Vial dynamic keymaps or QMK Settings.
+
 The keymap uses `LAYOUT_split_3x5_3`, and `keymap.c` defines a `chordal_hold_layout` where alpha keys are left/right handed and thumb keys are `*`. The `*` handedness means thumb layer-taps can chord naturally with either hand.
 
 ## Preserved Macros
 
-The settled Vial export includes three custom macros (`M0`, `M1`, and `M2`). They are kept as-is so this repo matches the layout snapshot I am actually using.
+The settled Vial export includes three custom macros (`M0`, `M1`, and `M2`). In the Vial export they are kept as-is. In the QMK-only keymap they are implemented as custom keycodes in C.

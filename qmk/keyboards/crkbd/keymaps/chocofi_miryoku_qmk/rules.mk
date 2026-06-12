@@ -1,0 +1,13 @@
+LTO_ENABLE          = yes
+
+RGBLIGHT_ENABLE     = yes
+RGB_MATRIX_ENABLE   = no
+MOUSEKEY_ENABLE     = no
+EXTRAKEY_ENABLE     = yes
+
+OLED_ENABLE         = no
+OLED_DRIVER         = SSD1306
+
+CAPS_WORD_ENABLE    = yes
+LAYER_LOCK_ENABLE   = yes
+REPEAT_KEY_ENABLE   = yes
