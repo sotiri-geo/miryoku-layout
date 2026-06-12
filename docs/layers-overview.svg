@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 720" role="img" aria-labelledby="title desc">
   <title id="title">Miryoku-inspired Chocofi layer overview</title>
-  <desc id="desc">Six keyboard diagrams showing the base, navigation, mouse, media, symbol, and number layers for a 36-key Chocofi layout.</desc>
+  <desc id="desc">Five keyboard diagrams showing the base, navigation, media, symbol, and number layers for a 36-key Chocofi QMK-only layout.</desc>
   <style>
     .bg { fill: #0b1220; }
     .panel { fill: #111827; stroke: #1f2937; stroke-width: 2; }
@@ -10,7 +10,6 @@
     .ghost { fill: #0f172a; stroke: #334155; stroke-width: 1.5; }
     .base { fill: #d9f99d; stroke: #84cc16; stroke-width: 1.5; }
     .nav { fill: #bfdbfe; stroke: #60a5fa; stroke-width: 1.5; }
-    .mouse { fill: #f9a8d4; stroke: #ec4899; stroke-width: 1.5; }
     .media { fill: #fdba74; stroke: #f97316; stroke-width: 1.5; }
     .symbol { fill: #c4b5fd; stroke: #8b5cf6; stroke-width: 1.5; }
     .number { fill: #86efac; stroke: #22c55e; stroke-width: 1.5; }
@@ -87,7 +86,7 @@
     <rect class="base" x="170" y="124" width="44" height="30" rx="8" /><text class="keytext" x="192" y="139">D</text>
     <rect class="base" x="220" y="124" width="44" height="30" rx="8" /><text class="keytext" x="242" y="139">V</text>
 
-    <rect class="base" x="120" y="166" width="44" height="30" rx="8" /><text class="keytext" x="142" y="181">L3/Esc</text>
+    <rect class="base" x="120" y="166" width="44" height="30" rx="8" /><text class="keytext" x="142" y="181">L2/Esc</text>
     <rect class="base" x="170" y="166" width="44" height="30" rx="8" /><text class="keytext" x="192" y="181">L1/Spc</text>
     <rect class="base" x="220" y="166" width="44" height="30" rx="8" /><text class="keytext" x="242" y="181">Tab</text>
 
@@ -109,8 +108,8 @@
     <rect class="base" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">.</text>
     <rect class="base" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">/</text>
 
-    <rect class="base" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">L5/Ent</text>
-    <rect class="base" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">L4/Bsp</text>
+    <rect class="base" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">L4/Ent</text>
+    <rect class="base" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">L3/Bsp</text>
     <rect class="base" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">=</text>
   </g>
 
@@ -145,33 +144,7 @@
 
   <g transform="translate(24 252)">
     <rect class="panel" x="0" y="0" width="540" height="212" rx="18" />
-    <text class="title" x="20" y="28">Layer 2: Mouse</text>
-    <text class="subtitle" x="20" y="42">Pointer, wheel, and mouse buttons</text>
-    <use href="#board-frame" />
-
-    <rect class="mouse" x="328" y="48" width="44" height="30" rx="8" /><text class="keytext" x="350" y="63">Paste</text>
-    <rect class="mouse" x="378" y="48" width="44" height="30" rx="8" /><text class="keytext" x="400" y="63">Copy</text>
-    <rect class="mouse" x="428" y="48" width="44" height="30" rx="8" /><text class="keytext" x="450" y="63">Cut</text>
-    <rect class="mouse" x="478" y="48" width="44" height="30" rx="8" /><text class="keytext" x="500" y="63">Undo</text>
-
-    <rect class="mouse" x="328" y="86" width="44" height="30" rx="8" /><text class="keytext" x="350" y="101">MsL</text>
-    <rect class="mouse" x="378" y="86" width="44" height="30" rx="8" /><text class="keytext" x="400" y="101">MsD</text>
-    <rect class="mouse" x="428" y="86" width="44" height="30" rx="8" /><text class="keytext" x="450" y="101">MsU</text>
-    <rect class="mouse" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">MsR</text>
-
-    <rect class="mouse" x="328" y="124" width="44" height="30" rx="8" /><text class="keytext" x="350" y="139">WhL</text>
-    <rect class="mouse" x="378" y="124" width="44" height="30" rx="8" /><text class="keytext" x="400" y="139">WhD</text>
-    <rect class="mouse" x="428" y="124" width="44" height="30" rx="8" /><text class="keytext" x="450" y="139">WhU</text>
-    <rect class="mouse" x="478" y="124" width="44" height="30" rx="8" /><text class="keytext" x="500" y="139">WhR</text>
-
-    <rect class="mouse" x="278" y="166" width="44" height="30" rx="8" /><text class="keytext" x="300" y="181">Btn2</text>
-    <rect class="mouse" x="328" y="166" width="44" height="30" rx="8" /><text class="keytext" x="350" y="181">Btn1</text>
-    <rect class="mouse" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Btn3</text>
-  </g>
-
-  <g transform="translate(576 252)">
-    <rect class="panel" x="0" y="0" width="540" height="212" rx="18" />
-    <text class="title" x="20" y="28">Layer 3: Media/System</text>
+    <text class="title" x="20" y="28">Layer 2: Media/System</text>
     <text class="subtitle" x="20" y="42">Volume, RGB, playback, and Hyper arrows</text>
     <use href="#board-frame" />
 
@@ -191,9 +164,9 @@
     <rect class="media" x="378" y="166" width="44" height="30" rx="8" /><text class="keytext" x="400" y="181">Mute</text>
   </g>
 
-  <g transform="translate(24 480)">
+  <g transform="translate(576 252)">
     <rect class="panel" x="0" y="0" width="540" height="212" rx="18" />
-    <text class="title" x="20" y="28">Layer 4: Shifted Symbols</text>
+    <text class="title" x="20" y="28">Layer 3: Shifted Symbols</text>
     <text class="subtitle" x="20" y="42">Symbols plus a right-hand mod cluster</text>
     <use href="#board-frame" />
 
@@ -225,9 +198,9 @@
     <rect class="symbol" x="478" y="86" width="44" height="30" rx="8" /><text class="keytext" x="500" y="101">Gui</text>
   </g>
 
-  <g transform="translate(576 480)">
+  <g transform="translate(24 480)">
     <rect class="panel" x="0" y="0" width="540" height="212" rx="18" />
-    <text class="title" x="20" y="28">Layer 5: Numbers</text>
+    <text class="title" x="20" y="28">Layer 4: Numbers</text>
     <text class="subtitle" x="20" y="42">Numbers, brackets, and a right-hand mod cluster</text>
     <use href="#board-frame" />
 
