@@ -1,7 +1,7 @@
 #pragma once
 
 #ifndef TAPPING_TERM
-#    define TAPPING_TERM 180
+#    define TAPPING_TERM 220
 #endif
 #ifndef QUICK_TAP_TERM
 #    define QUICK_TAP_TERM 120
