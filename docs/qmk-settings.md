@@ -2,12 +2,12 @@
 
 These are the QMK behavior settings paired with this layout to make home-row mods on Colemak-DH feel predictable on a small split board.
 
-## `config.h`
+## QMK-only `config.h`
 
 ```c
 #pragma once
 
-#define TAPPING_TERM 180
+#define TAPPING_TERM 350
 #define QUICK_TAP_TERM 120
 #define FLOW_TAP_TERM 150
 #define CHORDAL_HOLD
@@ -78,7 +78,7 @@ With this build, `CHORDAL_HOLD`, `HOLD_ON_OTHER_KEY_PRESS`, `FLOW_TAP_TERM`, and
 - `CHORDAL_HOLD` applies an opposite-hands rule: same-hand rolls resolve as taps, which helps avoid accidental home-row-mod activation while typing.
 - `HOLD_ON_OTHER_KEY_PRESS` lets opposite-hand chords resolve as holds immediately, which makes shortcuts like `Ctrl+C` or `Shift+letter` feel responsive.
 - `FLOW_TAP_TERM 150` protects fast typing by forcing tap behavior when another tap-hold key is pressed soon after a previous normal typing key.
-- `TAPPING_TERM 180` is the main tap-vs-hold window.
+- `TAPPING_TERM 350` is the QMK-only build's tap-vs-hold window. The Vial build remains at 180 ms because its value is also stored in the Vial export and QMK Settings EEPROM.
 - `QUICK_TAP_TERM 120` keeps quick repeated taps usable without making home-row mods too eager.
 - Caps Word is enabled so `CW_TOGG` can be placed in Vial; it turns itself off at word boundaries such as Space.
 

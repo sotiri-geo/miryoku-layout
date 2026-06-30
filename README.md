@@ -10,7 +10,7 @@ This repo captures the Miryoku-inspired layout I use on my 36-key split Chocofi.
 - Mods: home-row mods
 - Firmware tooling: Vial-QMK on `crkbd/rev1`; QMK-only keymap also kept for tap-hold testing
 - Controller target: RP2040 Pro Micro-compatible controller, built with `CONVERT_TO=rp2040_ce`
-- QMK behavior tuning: `TAPPING_TERM 180`, `QUICK_TAP_TERM 120`, `FLOW_TAP_TERM 150`, `CHORDAL_HOLD`, `HOLD_ON_OTHER_KEY_PRESS`
+- QMK behavior tuning: QMK-only `TAPPING_TERM 350`, Vial `TAPPING_TERM 180`, `QUICK_TAP_TERM 120`, `FLOW_TAP_TERM 150`, `CHORDAL_HOLD`, `HOLD_ON_OTHER_KEY_PRESS`
 
 ## Repo Contents
 
