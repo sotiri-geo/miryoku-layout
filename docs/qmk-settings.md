@@ -2,13 +2,13 @@
 
 These are the QMK behavior settings paired with this layout to make home-row mods on Colemak-DH feel predictable on a small split board.
 
-## QMK-only `config.h`
+## `config.h`
 
 ```c
 #pragma once
 
 #define TAPPING_TERM 350
-#define QUICK_TAP_TERM 120
+#define QUICK_TAP_TERM 0
 #define FLOW_TAP_TERM 150
 #define CHORDAL_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
@@ -17,48 +17,12 @@ These are the QMK behavior settings paired with this layout to make home-row mod
 #define CAPS_WORD_INVERT_ON_SHIFT
 ```
 
-## Vial Feature Capacity
-
-The firmware and save file are intentionally sized for the current Vial export:
-
-```c
-#define DYNAMIC_KEYMAP_LAYER_COUNT 10
-#define VIAL_TAP_DANCE_ENTRIES 32
-#define VIAL_COMBO_ENTRIES 32
-#define VIAL_KEY_OVERRIDE_ENTRIES 32
-```
-
-Because `REPEAT_KEY_ENABLE = yes`, Vial also exposes 32 alt-repeat entries. The canonical export fills unused slots with neutral values so Vial can import it cleanly.
-
-## Vial `rules.mk`
-
-```make
-VIA_ENABLE          = yes
-VIAL_ENABLE         = yes
-LTO_ENABLE          = yes
-
-RGBLIGHT_ENABLE     = yes
-RGB_MATRIX_ENABLE   = no
-MOUSEKEY_ENABLE     = yes
-EXTRAKEY_ENABLE     = yes
-TAP_DANCE_ENABLE    = yes
-KEY_OVERRIDE_ENABLE = yes
-COMBO_ENABLE        = yes
-QMK_SETTINGS        = yes
-
-CAPS_WORD_ENABLE    = yes
-LAYER_LOCK_ENABLE   = yes
-REPEAT_KEY_ENABLE   = yes
-```
-
-## QMK-only `rules.mk`
-
-The QMK-only diagnostic build intentionally leaves Vial and QMK Settings disabled:
+## `rules.mk`
 
 ```make
 LTO_ENABLE          = yes
 
-RGBLIGHT_ENABLE     = yes
+RGBLIGHT_ENABLE     = no
 RGB_MATRIX_ENABLE   = no
 MOUSEKEY_ENABLE     = no
 EXTRAKEY_ENABLE     = yes
@@ -71,55 +35,45 @@ LAYER_LOCK_ENABLE   = yes
 REPEAT_KEY_ENABLE   = yes
 ```
 
-With this build, `CHORDAL_HOLD`, `HOLD_ON_OTHER_KEY_PRESS`, `FLOW_TAP_TERM`, and the timing values come directly from `config.h`. Mouse keys are intentionally disabled because the QMK-only keymap omits the mouse layer.
+Mouse keys are disabled because the keymap has no mouse layer. RGB is disabled because the board has no LEDs driven by this firmware.
 
 ## Why These Settings
 
-- `CHORDAL_HOLD` applies an opposite-hands rule: same-hand rolls resolve as taps, which helps avoid accidental home-row-mod activation while typing.
-- `HOLD_ON_OTHER_KEY_PRESS` lets opposite-hand chords resolve as holds immediately, which makes shortcuts like `Ctrl+C` or `Shift+letter` feel responsive.
-- `FLOW_TAP_TERM 150` protects fast typing by forcing tap behavior when another tap-hold key is pressed soon after a previous normal typing key.
-- `TAPPING_TERM 350` is the QMK-only build's tap-vs-hold window. The Vial build remains at 180 ms because its value is also stored in the Vial export and QMK Settings EEPROM.
-- `QUICK_TAP_TERM 120` keeps quick repeated taps usable without making home-row mods too eager.
-- Caps Word is enabled so `CW_TOGG` can be placed in Vial; it turns itself off at word boundaries such as Space.
+The three tap-hold options work as a set, and QMK's documentation treats them that way: Chordal Hold is intended to be used together with either Permissive Hold or Hold On Other Key Press.
 
-## Vial Saved Settings
+- `CHORDAL_HOLD` applies an opposite-hands rule: same-hand rolls resolve as taps, which avoids accidental home-row-mod activation while typing.
+- `HOLD_ON_OTHER_KEY_PRESS` lets opposite-hand chords resolve as holds the instant the other key goes down, which makes cross-hand shortcuts feel immediate.
+- `FLOW_TAP_TERM 150` protects fast typing by forcing tap behavior when a tap-hold key is pressed soon after a previous normal typing key.
 
-The canonical export includes QMK Settings values matching the firmware:
+### `TAPPING_TERM 350`
 
-```json
-{
-  "7": 180,
-  "22": 0,
-  "23": 1,
-  "24": 0,
-  "25": 120,
-  "26": 1,
-  "27": 150
-}
-```
+Chordal Hold has no effect after the tapping term. Its same-hand-settles-as-tap rule only applies *within* `TAPPING_TERM`, so the long term is deliberate: it widens the window in which same-hand rolls are protected from firing a mod.
 
-For this Vial-QMK tree, these map to tapping term, permissive hold, hold-on-other-key, retro tapping, quick tap term, chordal hold, and flow tap term.
+The long term costs very little in practice. Because `HOLD_ON_OTHER_KEY_PRESS` settles opposite-hand chords immediately, the primary cross-hand workflow never waits on the tapping term at all. The term is only felt in two cases:
 
-## Runtime Guard
+- A lone hold, where a mod is held with no other key pressed.
+- A deliberate same-hand chord, such as `Ctrl`+`C` with Ctrl on left-home `S` and `C` on the same hand. Using the mirrored right-hand mod instead makes the chord cross-hand and immediate.
 
-Because `QMK_SETTINGS = yes` stores these tap-hold options in EEPROM, a fresh flash, EEPROM reset, or partial Vial import can leave Chordal Hold off even though `CHORDAL_HOLD` is compiled. When that happens, same-hand rolls such as holding `T` and pressing `V` incorrectly resolve as `Shift+V`.
+### `QUICK_TAP_TERM 0`
 
-The keymap's `keyboard_post_init_user()` reasserts the intended runtime settings at boot:
+Quick tap is the behavior where re-pressing a key within a short window of tapping it sends the tap keycode with auto-repeat instead of the hold. On home-row mods this shows up as `ttttt` where Shift was intended.
 
-```c
-set_qmk_setting_u16(QSID_TAPPING_TERM, 180);
-set_qmk_setting_u8(QSID_PERMISSIVE_HOLD, 0);
-set_qmk_setting_u8(QSID_HOLD_ON_OTHER_KEY_PRESS, 1);
-set_qmk_setting_u8(QSID_RETRO_TAPPING, 0);
-set_qmk_setting_u16(QSID_QUICK_TAP_TERM, 120);
-set_qmk_setting_u8(QSID_CHORDAL_HOLD, 1);
-set_qmk_setting_u16(QSID_FLOW_TAP_TERM, 150);
-```
+Chordal Hold cannot help here. Its opposite-hands rule compares two *different* keys, so it has nothing to say about the same key being pressed twice. Quick tap is the one gap in the guard, which makes disabling it more important the higher `TAPPING_TERM` is.
 
-It reads first and only writes when a value differs, avoiding repeated EEPROM writes during normal boots.
+The value must be defined explicitly as `0`. Deleting the define does not disable the feature — QMK falls back to `QUICK_TAP_TERM = TAPPING_TERM`, which here would mean a 350 ms window.
+
+### `is_flow_tap_key()`
+
+Flow Tap's default key set is `KC_SPC`, `KC_A`–`KC_Z`, `KC_DOT`, `KC_COMM`, `KC_SCLN` and `KC_SLSH`. It omits `KC_QUOT`, which on this layout sits on the right pinky.
+
+That leaves a gap: after an apostrophe, the next tap-hold key gets no Flow Tap protection, and Chordal Hold does not cover it either, because `'` is right-handed while `S` and `T` are left-hand mod-taps. Words like `don't`, `it's` and `can't` are the exposed cases. `keymap.c` overrides the callback to add `KC_QUOT`.
+
+The callback's mod guard is kept as-is, so Flow Tap still disables itself while GUI, Ctrl or Alt is held and cannot interfere with shortcuts.
 
 ## Notes
 
-- `PERMISSIVE_HOLD` is intentionally off. It is useful as a softer alternative to `HOLD_ON_OTHER_KEY_PRESS`, but enabling both adds little for this layout because hold-on-other-key resolves first.
+- `PERMISSIVE_HOLD` is intentionally off. It is the alternative to `HOLD_ON_OTHER_KEY_PRESS` for the opposite-hands case, but it requires the other key to be pressed *and released* first, which is less responsive for a cross-hand workflow.
 - `IGNORE_MOD_TAP_INTERRUPT` is not used. In newer QMK it was removed in favor of hold-on-other-key behavior.
+- Flow Tap disables itself while a tap-hold key is still undecided, so chording two home-row mods together does not require waiting out the flow term.
+- To observe the decisions rather than infer them, build once with `CONSOLE_ENABLE = yes` and run `qmk console`. Chordal Hold logs `Tapping: End. Chord considered a tap` each time the same-hand rule fires.
 - References: [QMK Tap-Hold configuration](https://docs.qmk.fm/tap_hold), [QMK Caps Word](https://develop-docs.qmk.fm/features/caps_word).

@@ -20,42 +20,30 @@ Right hand:
 
 Thumb keys:
 
-- Left: `LT3(Escape)`, `LT1(Space)`, `Tab`
-- Right: `LT5(Enter)`, `LT4(Backspace)`, `=`
+- Left: `LT2(Escape)`, `LT1(Space)`, `Tab`
+- Right: `LT4(Enter)`, `LT3(Backspace)`, `=`
 
-## Vial Layer Sketch
+## Layers
 
 - Layer 1 is the main navigation and edit layer.
-- Layer 2 is the mouse layer with pointer, wheel, and buttons.
-- Layer 3 holds media, RGB, and system controls.
-- Layer 4 is the shifted symbol layer.
-- Layer 5 is the number and unshifted symbol layer.
+- Layer 2 holds media, RGB, and system controls.
+- Layer 3 is the shifted symbol layer.
+- Layer 4 is the number and unshifted symbol layer.
 
-## QMK-only Layer Sketch
-
-The QMK-only keymap omits the mouse layer and compiles only the layers I actively use:
-
-- Navigation and edit
-- Media, RGB, and system controls
-- Shifted symbols
-- Numbers and unshifted symbols
-
-## Saved Export
-
-The canonical Chocofi-compatible Vial save file in this repo is `exports/chocofi-miryoku-colemakdh.vil`.
-
-It is formatted for the firmware in `firmware/crkbd_rev1_chocofi_miryoku_vial_rp2040_ce.uf2`, including 10 layers and the Vial feature arrays required by the compiled firmware.
-
-The earlier source save is kept at `exports/miryoku-colemakdh.vil` for reference.
+There is no mouse layer. Mouse keys are not compiled in.
 
 ## Firmware Source
 
-The matching Vial-QMK keymap source is stored under `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_vial/`.
+The keymap source is stored under `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_qmk/`. It compiles the layout directly into `keymap.c`, so the firmware behaves the same on a fresh flash as it does after an EEPROM reset — there is no dynamic keymap to import or lose.
 
-A QMK-only keymap is also stored under `qmk/keyboards/crkbd/keymaps/chocofi_miryoku_qmk/`. It compiles the layout directly into `keymap.c` so tap-hold behavior can be tested without Vial dynamic keymaps or QMK Settings.
+The keymap uses `LAYOUT_split_3x5_3`, and `keymap.c` defines a `chordal_hold_layout` where alpha keys are left/right handed and thumb keys are `*`. The `*` handedness exempts thumbs from the opposite-hands rule, which lets thumb layer-taps chord naturally with either hand.
 
-The keymap uses `LAYOUT_split_3x5_3`, and `keymap.c` defines a `chordal_hold_layout` where alpha keys are left/right handed and thumb keys are `*`. The `*` handedness means thumb layer-taps can chord naturally with either hand.
+`keymap.c` also overrides `is_flow_tap_key()` to add `KC_QUOT` to Flow Tap's key set. See `qmk-settings.md` for why.
 
-## Preserved Macros
+## Macros
 
-The settled Vial export includes three custom macros (`M0`, `M1`, and `M2`). In the Vial export they are kept as-is. In the QMK-only keymap they are implemented as custom keycodes in C.
+Three editing macros are implemented as custom keycodes in C:
+
+- `M_3W` types `3w`
+- `M_3B` types `3b`
+- `M_GD` types `gd`

@@ -1,6 +1,6 @@
 LTO_ENABLE          = yes
 
-RGBLIGHT_ENABLE     = yes
+RGBLIGHT_ENABLE     = no
 RGB_MATRIX_ENABLE   = no
 MOUSEKEY_ENABLE     = no
 EXTRAKEY_ENABLE     = yes

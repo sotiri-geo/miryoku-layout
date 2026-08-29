@@ -100,3 +100,26 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT_split_
     'L', 'L', 'L', 'L', 'L',                         'R', 'R', 'R', 'R', 'R',
                    '*', '*', '*',               '*', '*', '*'
 );
+
+// QMK's default omits KC_QUOT, which sits on the right pinky here. Without it,
+// Flow Tap goes quiet after an apostrophe, and Chordal Hold does not cover the
+// gap either because ' is right-handed while S and T are left-hand mod-taps.
+// That leaves don't, it's, and can't exposed at speed.
+bool is_flow_tap_key(uint16_t keycode) {
+    if ((get_mods() & (MOD_MASK_CG | MOD_BIT_LALT)) != 0) {
+        return false; // Disable Flow Tap on hotkeys.
+    }
+
+    switch (get_tap_keycode(keycode)) {
+        case KC_SPC:
+        case KC_A ... KC_Z:
+        case KC_DOT:
+        case KC_COMM:
+        case KC_SCLN:
+        case KC_SLSH:
+        case KC_QUOT:
+            return true;
+    }
+
+    return false;
+}

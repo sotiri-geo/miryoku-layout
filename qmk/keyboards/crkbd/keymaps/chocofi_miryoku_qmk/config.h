@@ -4,7 +4,7 @@
 #    define TAPPING_TERM 350
 #endif
 #ifndef QUICK_TAP_TERM
-#    define QUICK_TAP_TERM 120
+#    define QUICK_TAP_TERM 0
 #endif
 #ifndef FLOW_TAP_TERM
 #    define FLOW_TAP_TERM 150
